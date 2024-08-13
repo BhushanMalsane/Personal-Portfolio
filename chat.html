@@ -90,15 +90,54 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <p id="status"></p>
     </section>
 
     <footer>
-        <p>&copy; 2024 BhushanMalsane. All Rights Reserved.</p>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
     </footer>
+
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("4f_32OR1XuJLqBYlY"); // Replace with your EmailJS user ID
+        })();
+    </script>
+
+// Include EmailJS SDK in your HTML
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    (function() {
+        emailjs.init("4f_32OR1XuJLqBYlY"); // Replace with your EmailJS User ID
+    })();
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        emailjs.send("service_b159nye", "template_86ucv7a", {
+            from_name: name,
+            from_email: email,
+            message: message
+        })
+        .then(function(response) {
+            document.getElementById('form-status').innerText = `Thank you for your message, ${name}!`;
+            form.reset(); // Clear the form fields
+        }, function(error) {
+            document.getElementById('form-status').innerText = 'An error occurred while sending your message.';
+        });
+    });
+</script>
+
 </body>
 </html>

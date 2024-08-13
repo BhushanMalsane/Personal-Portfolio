@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +10,11 @@
     <!----Font awesome cdn  font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <style>
-        #myPDF{
+        #myPDF {
             width: 85%;
             height: 975px;
         }
+
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
@@ -61,11 +63,12 @@
         }
 
         /* Contact Form Styles */
-        #contact-form input, #contact-form textarea {
+        #contact-form input,
+        #contact-form textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ddd;
+            border: 3px solid #6ec9fa;
             border-radius: 5px;
         }
 
@@ -81,16 +84,19 @@
         #contact-form button:hover {
             background-color: white;
             color: black;
+            font-size: 1rem;
         }
-        #contact h2{
+
+        #contact h2 {
             color: lavenderblush;
         }
     </style>
 
 
 </head>
+
 <body>
-     <div class="hero-header">
+    <div class="hero-header">
         <div class="wrapper">
             <header>
                 <div class="logo">
@@ -114,17 +120,21 @@
             </header>
             <section id="contact">
                 <h2>Contact Me</h2>
-                <form id="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="4fe5cf2e-c8fe-44a2-abe2-7b55d839635e">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" rows="4" placeholder="Write Your Message"></textarea>
                     <button type="submit">Send</button>
                 </form>
             </section>
+            <footer>
+                <p>&copy; 2024 BhushanMalsane. All Rights Reserved.</p>
+            </footer>
         </div>
-     </div>
-     <!---typed js for typing text effect-->
-     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    </div>
+    <!---typed js for typing text effect-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
      <script>
         /** creating button click show hide navbar **/
         
@@ -135,6 +145,7 @@
 
         
      </script> -->
-    
+
 </body>
+
 </html>
