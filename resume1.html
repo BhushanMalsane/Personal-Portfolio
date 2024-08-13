@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <!----Font awesome cdn  font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        #myPDF{
+            width: 85%;
+            height: 975px;
+        }
+    </style>
+
 </head>
 <body>
      <div class="hero-header">
@@ -24,43 +31,19 @@
                         <span></span>
                     </div>
                     <ul class="navlinks">
-                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="/resume1.html">Resume</a></li>
-                        <li><a href="/resume1.html">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="container">
-                 <div class="hero-pic">
-                    <img src="images/HSE2.jpg" alt="profile pic">
-                 </div>
-                 <div class="hero-text">
-                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
-                    <h1>Bhushan Shantaram Malsane</h1>
-                    <p> I currently completed my PG Diploma in 
-                        Advanced Computing where I learn many new things. If I’m talk about skills, I have a good 
-                        knowledge of some technologies & programming languages like core java, Advanced Java, 
-                        Dotnet core, MySQL, ReactJs, DSA,Html,CSS.
-                    </p>
-
-                    <div class="btn-group">
-                       <a href="/ResumeN.pdf" class="btn active">Download CV</a>
-                       <a href="#" class="btn">Contact</a>
-                    </div>
-
-                    <div class="social">
-                        <a href="https://github.com/BhushanMalsane"><i class="fa-brands fa-github" style="font-size: 30px;"></i></a>
-                        <a href="https://www.linkedin.com/in/bhushanmalsane/"><i class="fa-brands fa-linkedin" style="font-size: 30px;"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook" ></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram" ></i></a>
-                        <a href="#"><i class="fa-brands fa-dribbble" ></i></a>
-
-                        
-                    </div>
-                 </div>
+                <iframe id="myPDF" src="ResumeN.pdf"></iframe>
             </div>
+            
+            
         </div>
      </div>
      <!---typed js for typing text effect-->
@@ -83,5 +66,6 @@
             loop:true
         })
      </script>
+    
 </body>
 </html>
