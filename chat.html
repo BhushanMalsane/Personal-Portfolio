@@ -1,143 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Your Name</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <style>
-        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            line-height: 1.6;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        section {
+        #projects {
             padding: 50px;
+            background-color: #1e1e1e;
+        }
+
+        #projects h2 {
             text-align: center;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project-card {
+            background-color: #2c2c2c;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            max-width: 300px;
             text-align: center;
-            position: fixed;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card img {
             width: 100%;
-            bottom: 0;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
         }
 
-        /* Contact Form Styles */
-        #contact-form input, #contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .project-card h3 {
+            margin: 15px 0;
+            font-size: 1.8em;
+            color: #ffffff;
         }
 
-        #contact-form button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .project-card p {
+            font-size: 1em;
+            color: #b0b0b0;
+            padding: 0 20px;
         }
 
-        #contact-form button:hover {
-            background-color: #555;
+        .project-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 25px;
+            background-color: #ff4081;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #ff79a6;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-card {
+                width: 90%;
+                margin: 15px 0;
+            }
         }
     </style>
 </head>
+
 <body>
+    <div class="wrapper">
     <header>
+        <div class="logo">
+            <i class="fa-solid fa-b"></i>
+            <div class="logo-text">Bhushan Malsane</div>
+        </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <div class="togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navlinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat.html">Portfolio</a></li>
+                <li><a href="/resume1.html">Resume</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p id="status"></p>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="images/PORTFOLIOIMG.png" alt="Project 1">
+                <h3>Portfolio Website</h3>
+                <p>This is a personal portfolio website built with HTML, CSS, and JavaScript.</p>
+                <a href="https://personal-portfolio-mu-ruddy.vercel.app/" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="images/GitHubImg.png" alt="Project 2">
+                <h3>E-commerce Website</h3>
+                <p>An e-commerce platform with shopping cart functionality and user authentication.</p>
+                <a href="https://github.com/BhushanMalsane" class="project-link">View on GitHub</a>
+            </div>
+            <!-- Add more project cards here -->
+        </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Include EmailJS SDK -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("4f_32OR1XuJLqBYlY"); // Replace with your EmailJS user ID
-        })();
-    </script>
-
-// Include EmailJS SDK in your HTML
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-<script type="text/javascript">
-    (function() {
-        emailjs.init("4f_32OR1XuJLqBYlY"); // Replace with your EmailJS User ID
-    })();
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        emailjs.send("service_b159nye", "template_86ucv7a", {
-            from_name: name,
-            from_email: email,
-            message: message
-        })
-        .then(function(response) {
-            document.getElementById('form-status').innerText = `Thank you for your message, ${name}!`;
-            form.reset(); // Clear the form fields
-        }, function(error) {
-            document.getElementById('form-status').innerText = 'An error occurred while sending your message.';
-        });
-    });
-</script>
-
+</div>
 </body>
+
 </html>
